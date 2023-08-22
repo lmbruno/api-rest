@@ -17,3 +17,10 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => c
     return callback(new Error('Not allowed by CORS'))
   }
 })
+
+// pre flight needed for more patch, update delete, put
+// app.options('/movies/:id', (req, res) => {
+//   res.header('Access-Control-Allow-Origin', '*')
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PATCH, PUT')
+//   res.send()
+// })

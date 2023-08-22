@@ -1,0 +1,37 @@
+GET http://localhost:8081/movies
+
+###
+GET http://localhost:8081/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+###
+GET http://localhost:8081/movies?genre=Action
+
+###
+PATCH http://localhost:8081/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1990
+}
+
+###
+POST http://localhost:8081/movies
+Content-Type: application/json
+
+{
+    "sql": "asdasd",
+    "title": "Inception",
+    "year": 2010,
+    "director": "Christopher Nolan",
+    "duration": 148,
+    "poster": "https://m.media-amazon.com/images/I/91Rc8cAmnAL._AC_UF1000,1000_QL80_.jpg",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rate": 8.8
+}
+
+###
+DELETE http://localhost:8081/movies/9e41b21a-dc62-4985-b9e6-c3a14a07f910
